@@ -34,6 +34,7 @@ window.Character = function(options) {
 	this.Name = options.Name;
 	this.Color = options.Color;
 	this.Position = options.Position;
+	this.Image = options.Image;
 
 	// behavior/functionality
 	this.sayHello = function() {

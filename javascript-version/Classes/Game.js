@@ -18,13 +18,27 @@ window.Game = function(options) {
 	// draw only the characters
 	this._drawCharacters = function() {
 		for (var i in this.Characters) {
+
+			// we get a reference to out character:
 			var character = this.Characters[i];
-			this.DrawingContext.fillStyle = character.Color;
-			this.DrawingContext.fillRect(
+
+			// // we set the drawing context fill color
+			// this.DrawingContext.fillStyle = character.Color;
+
+			// // then we draw a filled rectangle at X, Y of size 48 x 48
+			// this.DrawingContext.fillRect(
+			// 	character.Position.X, 
+			// 	character.Position.Y, 
+			// 	48, 
+			// 	48
+			// );
+
+			this.DrawingContext.drawImage(
+				character.Image, 
 				character.Position.X, 
-				character.Position.Y, 
-				48, 
-				48
+				character.Position.Y,
+				26,
+				41
 			);
 		}
 	};

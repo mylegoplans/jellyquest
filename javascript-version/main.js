@@ -31,14 +31,29 @@
 	var bob = new Character({
 		Id: 1,
 		Name: 'Bob',
-		Color: '#FFFF00', // red/green/blue expressed RRGGBB 00-FF
+		Color: 'yellow', //'#FF0', // red/green/blue expressed RRGGBB 00-FF
 		Position: {
 			X: 10,
 			Y: 5
-		}
+		},
+		Image: document.getElementById('bob-pixil')
 	});
 
 	game.Characters.push(bob);
+
+	// create a Character called Bob
+	var bob2 = new Character({
+		Id: 2,
+		Name: 'Bob2',
+		Color: 'green', //'#00f', // red/green/blue expressed RRGGBB 00-FF
+		Position: {
+			X: 80,
+			Y: 35
+		},
+		Image: document.getElementById('bob-pixil')
+	});
+
+	game.Characters.push(bob2);
 
 	// setup user input
 	// hook up start/pause buttons
