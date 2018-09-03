@@ -27,6 +27,22 @@
 
 	game = new Game(gameOptions);
 
+	// create obstacle:
+	var obstacle1 = new Obstacle({
+		Color: 'lightgray',
+		Position: {
+			X: 300,
+			Y: 120
+		},
+		Size: {
+			Width: 150,
+			Height: 50
+		}
+	});
+
+	// add obstacle1 to game Obstacles collection:
+	game.Obstacles.push(obstacle1);
+
 	// create a Character called Bob
 	var bob = new Character({
 		Id: 1,
